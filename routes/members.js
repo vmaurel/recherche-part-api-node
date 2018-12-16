@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   const members = [];
-  for (let i = 0; i < 100000; i++) {
+  for (let i = 0; i < 50000; i++) {
     members.push({
       _id: i,
       firstname: faker.name.firstName(),
