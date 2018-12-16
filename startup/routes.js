@@ -4,6 +4,8 @@ const error = require("../middleware/error");
 
 module.exports = function(app) {
   app.use(express.json());
+  const cors = require("cors");
+  app.use(cors({ origin: "http://localhost:3000" }));
   app.use("/api/members", members);
   app.use(error);
 };
